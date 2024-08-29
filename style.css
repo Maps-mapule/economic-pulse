@@ -44,16 +44,19 @@ body {
 
 .container {
     position: relative;
-    width: 320px; /* Increased the width for better spacing */
+    width: 320px; /* Width of the form container */
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff; /* Added background color */
+    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for the container */
 }
 
+/* Add a small margin to the top to keep space between the h2 and the top of the form */
 h2 {
+    margin-top: 0;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .form-group {
