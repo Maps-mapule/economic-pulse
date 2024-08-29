@@ -1,55 +1,80 @@
-function showScreen(screenId) {
-    document.querySelectorAll('.screen').forEach(screen => {
-        screen.style.display = 'none';
+// Password Validation for Sign-Up
+document.getElementById('signup-form')?.addEventListener('submit', function(event) {
+    var password = document.getElementById('password').value;
+    var confirmPassword = document.getElementById('confirm-password').value;
+    var errorMessage = document.getElementById('error-message');
+    
+    if (password !== confirmPassword) {
+        errorMessage.textContent = 'Passwords do not match.';
+        event.preventDefault(); // Prevent form submission
+    } else {
+        errorMessage.textContent = '';
+        // Form is valid, you can submit the form or perform other actions
+    }
+});
+
+// Incorrect Password Handling for Sign-In
+document.getElementById('sign-in-form')?.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission for demo purposes
+
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var errorMessage = document.getElementById('sign-in-error');
+
+    // Example API request to check credentials
+    fetch('/api/check-credentials', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email: email, password: password })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Handle successful login
+            window.location.href = 'dashboard.html'; // Redirect to dashboard or another page
+        } else {
+            // Handle incorrect password
+            errorMessage.textContent = 'Incorrect email or password.';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        errorMessage.textContent = 'An error occurred. Please try again.';
     });
-    document.getElementById(screenId).style.display = 'block';
-}
-
-// Example: Show landing page after sign in
-document.getElementById('signin-button').addEventListener('click', function() {
-    showScreen('landing-page');
 });
 
-// Example: Show forgot password screen
-document.getElementById('forgot-password-link').addEventListener('click', function() {
-    showScreen('forgot-password-screen');
-});
+// Sending a Reset Password Link
+document.getElementById('forgot-password-form')?.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission for demo purposes
 
-// Example: Show sign in screen from forgot password screen
-document.getElementById('back-to-signin-link').addEventListener('click', function() {
-    showScreen('signin-screen');
-});
+    var email = document.getElementById('reset-email').value;
+    var resetMessage = document.getElementById('reset-message');
+    var resetError = document.getElementById('reset-error');
 
-// Show Client Profiles page
-document.getElementById('client-profile-button').addEventListener('click', function() {
-    showScreen('client-profile-page');
-});
-
-// Show Client Info page
-document.getElementById('client-info-button').addEventListener('click', function() {
-    showScreen('client-info-page');
-});
-
-// Show Prediction Process page
-document.getElementById('prediction-process-button').addEventListener('click', function() {
-    showScreen('prediction-process-page');
-});
-
-// Show Offer Loan to Client page
-document.getElementById('offer-loan-button').addEventListener('click', function() {
-    showScreen('offer-loan-page');
-});
-
-// Back to Landing page buttons
-document.getElementById('back-to-landing-button1').addEventListener('click', function() {
-    showScreen('landing-page');
-});
-document.getElementById('back-to-landing-button2').addEventListener('click', function() {
-    showScreen('landing-page');
-});
-document.getElementById('back-to-landing-button3').addEventListener('click', function() {
-    showScreen('landing-page');
-});
-document.getElementById('back-to-landing-button4').addEventListener('click', function() {
-    showScreen('landing-page');
+    fetch('/api/send-reset-link', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email: email })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Inform the user that the reset link has been sent
+            resetMessage.textContent = 'Reset link sent! Check your email.';
+            resetError.textContent = '';
+        } else {
+            // Inform the user of an error
+            resetError.textContent = 'Error sending reset link. Please try again.';
+            resetMessage.textContent = '';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        resetError.textContent = 'An error occurred. Please try again.';
+        resetMessage.textContent = '';
+    });
 });
