@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Economic Pulse</title>
+</head>
+<body>
+    <!-- Sign In / Sign Up Screen -->
+    <section id="signin-screen" class="screen">
+        <h2>Sign In / Sign Up</h2>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button id="signin-button" type="button">Sign In</button>
+            <p><a href="#" id="forgot-password-link">Forgot Password?</a></p>
+        </form>
+    </section>
+
+    <!-- Forgot Password Screen -->
+    <section id="forgot-password-screen" class="screen">
+        <h2>Forgot Password</h2>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Submit</button>
+        </form>
+        <p><a href="#" id="back-to-signin-link">Back to Sign In</a></p>
+    </section>
+
+    <!-- Landing Page -->
+    <section id="landing-page" class="screen">
+        <h2>Welcome to Economic Pulse</h2>
+        <button id="client-profile-button" type="button">View Client Profiles</button>
+        <button id="client-info-button" type="button">View Client Info</button>
+        <button id="prediction-process-button" type="button">Start Prediction Process</button>
+    </section>
+
+    <!-- Client Profile Page -->
+    <section id="client-profile-page" class="screen">
+        <h2>Client Profiles</h2>
+        <ul>
+            <li>Client 1 - <button type="button">View Profile</button></li>
+            <li>Client 2 - <button type="button">View Profile</button></li>
+            <li>Client 3 - <button type="button">View Profile</button></li>
+        </ul>
+        <button id="back-to-landing-button1" type="button">Back to Landing</button>
+    </section>
+
+    <!-- Client Info Page -->
+    <section id="client-info-page" class="screen">
+        <h2>Client Info</h2>
+        <p>Client Information Details</p>
+        <button id="back-to-landing-button2" type="button">Back to Landing</button>
+    </section>
+
+    <!-- Prediction Process Page -->
+    <section id="prediction-process-page" class="screen">
+        <h2>Prediction Process</h2>
+        <button id="offer-loan-button" type="button">Offer Loan to Client</button>
+        <button id="back-to-landing-button3" type="button">Back to Landing</button>
+    </section>
+
+    <!-- Offer Loan to Client Page -->
+    <section id="offer-loan-page" class="screen">
+        <h2>Offer Loan to Client</h2>
+        <p>Loan Offer Details and Confirmation</p>
+        <button id="back-to-landing-button4" type="button">Back to Landing</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
