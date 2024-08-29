@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -21,7 +21,7 @@ body {
     display: none;
     text-align: center;
     padding: 20px;
-    background-color:#E6E6E6;
+    background-color: #E6E6E6;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -41,25 +41,39 @@ body {
     text-decoration: none;
     color: green;
 }
+
 .container {
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 320px; /* Increased the width for better spacing */
     margin: 0 auto;
-    border: 1px solid #ccc;
     padding: 20px;
+    background-color: #fff; /* Added background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow */
 }
 
 h2 {
     margin-bottom: 20px;
 }
 
+.form-group {
+    margin-bottom: 15px;
+    text-align: left; /* Align text to the left */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
 input[type="text"], input[type="password"], input[type="email"] {
-    width: 80%;
+    width: calc(100% - 22px); /* Adjust width to match container */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 button {
@@ -70,10 +84,12 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    width: 100%; /* Make button full width */
 }
 
 button:hover {
     background-color: white;
+    color: #201b25;
 }
 
 /* Display the first screen by default */
