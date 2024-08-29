@@ -27,6 +27,13 @@ body {
     color: #E4CCFF;
 }
 
+.sign-up {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-decoration: none;
+    color: green;
+}
 .container {
     position: relative;
     width: 300px;
