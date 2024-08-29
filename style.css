@@ -57,7 +57,7 @@ input[type="text"], input[type="password"], input[type="email"] {
 
 button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #E4CCFF;
     color: #E4CCFF;
     border: none;
     border-radius: 5px;
@@ -66,7 +66,7 @@ button {
 }
 
 button:hover {
-    background-color: #E4CCFF;
+    background-color: white;
 }
 
 /* Display the first screen by default */
