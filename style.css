@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -58,7 +58,7 @@ input[type="text"], input[type="password"], input[type="email"] {
 button {
     padding: 10px 20px;
     background-color: #E4CCFF;
-    color: #E4CCFF;
+    color: #201b25;
     border: none;
     border-radius: 5px;
     cursor: pointer;
