@@ -9,19 +9,18 @@ document.getElementById('signup-form')?.addEventListener('submit', function(even
         event.preventDefault(); // Prevent form submission
     } else {
         errorMessage.textContent = '';
-        // Form is valid, you can submit the form or perform other actions
+        // Form is valid, it will be submitted
     }
 });
 
 // Incorrect Password Handling for Sign-In
 document.getElementById('sign-in-form')?.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission for demo purposes
+    event.preventDefault(); // Prevent default form submission for AJAX handling
 
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
     var errorMessage = document.getElementById('sign-in-error');
 
-    // Example API request to check credentials
     fetch('/api/check-credentials', {
         method: 'POST',
         headers: {
@@ -47,7 +46,7 @@ document.getElementById('sign-in-form')?.addEventListener('submit', function(eve
 
 // Sending a Reset Password Link
 document.getElementById('forgot-password-form')?.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission for demo purposes
+    event.preventDefault(); // Prevent default form submission for AJAX handling
 
     var email = document.getElementById('reset-email').value;
     var resetMessage = document.getElementById('reset-message');
