@@ -19,6 +19,23 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.forgot-password {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: blue;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
 h2 {
     margin-bottom: 20px;
 }
