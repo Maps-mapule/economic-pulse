@@ -76,4 +76,13 @@ document.getElementById('forgot-password-form')?.addEventListener('submit', func
         resetError.textContent = 'An error occurred. Please try again.';
         resetMessage.textContent = '';
     });
+
+    document.getElementById('signin-form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent the default form submission for custom handling
+        
+        // Here, you would typically check the sign-in credentials
+        // For this example, we'll just redirect to the landing page
+    
+        window.location.href = 'landing-page.html'; // Redirect to landing page
+    });
 });

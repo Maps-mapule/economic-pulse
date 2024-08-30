@@ -104,3 +104,88 @@ button:hover {
 #signin-screen {
     display: block;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+}
+
+.nav-button {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+.simplified-section {
+    margin: 30px auto;
+    padding: 20px;
+    width: 60%;
+    border: 2px solid #333;
+    border-radius: 15px;
+    background-color: #E4CCFF;
+}
+
+h3 {
+    font-size: 28px;
+    color: #201b25;
+}
+
+.start-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.start-button:hover {
+    background-color: #555;
+}
+
+.detail-image {
+    margin-top: 40px;
+}
+
+.detail-image img {
+    width: 80%; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
