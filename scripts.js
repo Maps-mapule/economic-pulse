@@ -1,4 +1,4 @@
-// Password Validation for Sign-Up
+
 document.getElementById('signup-form')?.addEventListener('submit', function(event) {
     var password = document.getElementById('password').value;
     var confirmPassword = document.getElementById('confirm-password').value;
@@ -6,16 +6,14 @@ document.getElementById('signup-form')?.addEventListener('submit', function(even
     
     if (password !== confirmPassword) {
         errorMessage.textContent = 'Passwords do not match.';
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault(); 
     } else {
         errorMessage.textContent = '';
-        // Form is valid, it will be submitted
     }
 });
 
-// Incorrect Password Handling for Sign-In
 document.getElementById('sign-in-form')?.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission for AJAX handling
+    event.preventDefault(); 
 
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
@@ -31,10 +29,10 @@ document.getElementById('sign-in-form')?.addEventListener('submit', function(eve
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            // Handle successful login
-            window.location.href = 'dashboard.html'; // Redirect to dashboard or another page
+          
+            window.location.href = 'dashboard.html'; 
         } else {
-            // Handle incorrect password
+  
             errorMessage.textContent = 'Incorrect email or password.';
         }
     })
@@ -44,9 +42,8 @@ document.getElementById('sign-in-form')?.addEventListener('submit', function(eve
     });
 });
 
-// Sending a Reset Password Link
 document.getElementById('forgot-password-form')?.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission for AJAX handling
+    event.preventDefault();
 
     var email = document.getElementById('reset-email').value;
     var resetMessage = document.getElementById('reset-message');
@@ -62,11 +59,11 @@ document.getElementById('forgot-password-form')?.addEventListener('submit', func
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            // Inform the user that the reset link has been sent
+
             resetMessage.textContent = 'Reset link sent! Check your email.';
             resetError.textContent = '';
         } else {
-            // Inform the user of an error
+ 
             resetError.textContent = 'Error sending reset link. Please try again.';
             resetMessage.textContent = '';
         }
@@ -78,11 +75,17 @@ document.getElementById('forgot-password-form')?.addEventListener('submit', func
     });
 
     document.getElementById('signin-form').addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent the default form submission for custom handling
-        
-        // Here, you would typically check the sign-in credentials
-        // For this example, we'll just redirect to the landing page
+        e.preventDefault(); 
     
-        window.location.href = 'landing-page.html'; // Redirect to landing page
+        window.location.href = 'landing-page.html'; 
     });
+});
+
+document.getElementById('backButton').addEventListener('click', function () {
+    window.location.href = 'landing-page.html'; 
+});
+
+document.getElementById('searchBtn').addEventListener('click', function () {
+    const searchValue = document.getElementById('search').value;
+    alert(`You searched for ID: ${searchValue}`);
 });
