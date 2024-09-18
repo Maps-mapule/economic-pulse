@@ -274,3 +274,11 @@ body {
     font-size: 18px;
     color: #333;
 }
+
+.profile-card {
+    cursor: pointer;
+}
+
+.profile-card:hover {
+    background-color: #f0f0f0; 
+}
