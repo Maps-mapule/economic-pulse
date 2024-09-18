@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="client-info-screen" class="screen">
+        <div class="header">
+            <a href="client-profile.html"> <button id="backButton" class="back-btn">Back</button> </a>
+        </div>
+
+        <h1 class="page-title">Client Information</h1>
+
+        <div class="client-info">
+            <h2>Client ID: <span id="client-id"></span></h2>
+            <p><strong>Age:</strong> <span id="age"></span></p>
+            <p><strong>Occupation:</strong> <span id="occupation"></span></p>
+            <p><strong>Education:</strong> <span id="education"></span></p>
+            <p><strong>Marital Status:</strong> <span id="marital-status"></span></p>
+
+            <h2>Economic Indicators</h2>
+            <p><strong>The employment variation rate:</strong> <span id="employment-variation-rate"></span></p>
+            <p><strong>The consumer price index:</strong> <span id="consumer-price-index"></span></p>
+            <p><strong>The consumer confidence index:</strong> <span id="consumer-confidence-index"></span></p>
+            <p><strong>The 3-month Euribor rate:</strong> <span id="euribor-rate"></span></p>
+            <p><strong>The number of employed people:</strong> <span id="number-of-employed"></span></p>
+        </div>
+
+        <button id="predictButton">Predict</button>
+
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const clientId = urlParams.get('id');
+            document.getElementById('client-id').textContent = clientId;
+
+            fetch(`/api/client/${clientId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert("Client not found!");
+                    } else {
+                        document.getElementById('age').textContent = data.age;
+                        document.getElementById('occupation').textContent = data.occupation;
+                        document.getElementById('education').textContent = data.education;
+                        document.getElementById('marital-status').textContent = data.marital_status;
+                        document.getElementById('employment-variation-rate').textContent = data.employment_variation_rate;
+                        document.getElementById('consumer-price-index').textContent = data.consumer_price_index;
+                        document.getElementById('consumer-confidence-index').textContent = data.consumer_confidence_index;
+                        document.getElementById('euribor-rate').textContent = data.euribor_rate;
+                        document.getElementById('number-of-employed').textContent = data.number_of_employed;
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching client data:", error);
+                });
+
+            document.getElementById('predictButton').addEventListener('click', function() {
+                window.location.href = `prediction-process.html?id=${clientId}`;
+            });
+        </script>
+    </section>
+</body>
+</html>

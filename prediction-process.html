@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Process</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="prediction-screen" class="screen">
+        <h1 class="page-title">Prediction Results</h1>
+
+        <div class="prediction-results">
+            <p><strong>Loan Approval Probability:</strong> <span id="loan-probability"></span></p>
+            <p><strong>Risk Level:</strong> <span id="risk-level"></span></p>
+            <p><strong>Advice:</strong> <span id="advice"></span></p>
+        </div>
+
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const clientId = urlParams.get('id');
+
+            fetch(`/api/client/${clientId}/predict`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert("Prediction not available for this client!");
+                    } else {
+                        document.getElementById('loan-probability').textContent = (data.loan_approval_probability * 100).toFixed(2) + "%";
+                        document.getElementById('risk-level').textContent = data.risk_level;
+                        document.getElementById('advice').textContent = data.advice;
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching prediction:", error);
+                });
+        </script>
+    </section>
+</body>
+</html>
