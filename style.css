@@ -282,3 +282,138 @@ body {
 .profile-card:hover {
     background-color: #f0f0f0; 
 }
+
+/* client-info-screen.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#client-info-screen {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+}
+
+.client-info {
+    margin-bottom: 20px;
+}
+
+.client-info h2, .client-info p {
+    margin: 10px 0;
+}
+
+.client-info span {
+    font-weight: normal;
+    color: #555;
+}
+
+#predictButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#predictButton:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 600px) {
+    #client-info-screen {
+        padding: 10px;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+
+    .back-btn, #predictButton {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+
+/* prediction-process-screen.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#prediction-screen {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.prediction-results {
+    margin-bottom: 20px;
+}
+
+.prediction-results p {
+    margin: 10px 0;
+}
+
+.prediction-results span {
+    font-weight: normal;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    #prediction-screen {
+        padding: 10px;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+}
