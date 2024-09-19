@@ -11,10 +11,10 @@ body {
 }
 
 .logo img {
-    width: 120px; /* Adjust the size as needed */
+    width: 120px;
     height: auto;
     display: block;
-    margin: 0 auto; /* Center the logo */
+    margin: 0 auto;
 }
 
 .screen {
@@ -44,15 +44,15 @@ body {
 
 .container {
     position: relative;
-    width: 320px; /* Width of the form container */
+    width: 320px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Add a small margin to the top to keep space between the h2 and the top of the form */
+
 h2 {
     margin-top: 0;
     margin-bottom: 20px;
@@ -60,13 +60,13 @@ h2 {
 }
 
 hr {
-    height: 1px;         /* Set the height of the line */
-    background-color: #ccc; /* Set the color of the line */
-    margin: 20px 0;      /* Add some space above and below the line */
+    height: 1px;         
+    background-color: #ccc; 
+    margin: 20px 0;      
 }
 .form-group {
     margin-bottom: 15px;
-    text-align: left; /* Align text to the left */
+    text-align: left; 
 }
 
 .form-group label {
@@ -76,7 +76,7 @@ hr {
 }
 
 input[type="text"], input[type="password"], input[type="email"] {
-    width: calc(100% - 22px); /* Adjust width to match container */
+    width: calc(100% - 22px); 
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -92,7 +92,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    width: 100%; /* Make button full width */
+    width: 100%; 
 }
 
 button:hover {
@@ -100,7 +100,7 @@ button:hover {
     color: #201b25;
 }
 
-/* Display the first screen by default */
+
 #signin-screen {
     display: block;
 }
@@ -122,7 +122,7 @@ header {
 }
 
 .logo {
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
     height: auto;
 }
 
@@ -176,7 +176,7 @@ h3 {
 }
 
 .detail-image img {
-    width: 80%; /* Adjust size as needed */
+    width: 80%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -536,4 +536,85 @@ body {
 .predict-btn:hover {
     background-color: #218838;
 }
+
+/*prediction-process*/
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.back-btn {
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.analysis-container {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 30px;
+}
+
+.discard-btn, .offer-loan-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.discard-btn {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.discard-btn:hover {
+    background-color: #e53935;
+}
+
+.offer-loan-btn {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.offer-loan-btn:hover {
+    background-color: #43a047;
+}
+
 
