@@ -195,26 +195,37 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+}
+
+.screen {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
 }
 
 .header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 100%;
     padding: 10px;
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #ddd;
+    background-color: #333;
 }
 
 .back-btn {
-    background-color: #333;
-    color: white;
+    color: #fff;
+    background-color: #007BFF;
     border: none;
-    padding: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
     cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
 }
 
 .search-container {
@@ -224,66 +235,88 @@ body {
 
 .search-container input {
     padding: 8px;
-    border: 1px solid #ddd;
+    font-size: 14px;
+    border: 1px solid #ccc;
     border-radius: 4px;
 }
 
 .search-container button {
-    padding: 8px;
     margin-left: 5px;
-    background-color: #333;
-    color: white;
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: #fff;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
 }
 
 .page-title {
     margin-top: 20px;
     font-size: 24px;
+    font-weight: bold;
     color: #333;
 }
 
 .profile-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    max-width: 500px;
+    justify-content: space-between;
+    margin-top: 20px;
     gap: 20px;
+    max-width: 800px;
 }
 
 .profile-card {
+    background-color: #fff;
+    text-decoration: none;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 20px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 15px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    width: 120px;
-    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.profile-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
 .profile-icon {
     width: 80px;
     height: 80px;
-    border-radius: 50%;
     margin-bottom: 10px;
+    border-radius: 50%;
+    border: 2px solid #007BFF;
 }
 
 .profile-card p {
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
 }
 
-.profile-card {
-    cursor: pointer;
+@media screen and (max-width: 768px) {
+    .profile-card {
+        width: calc(50% - 20px);
+    }
 }
 
-.profile-card:hover {
-    background-color: #f0f0f0; 
+@media screen and (max-width: 480px) {
+    .profile-card {
+        width: 100%;
+    }
 }
 
-/* client-info-screen.css */
+
+/* client-info-screen.css 
 
 body {
     font-family: Arial, sans-serif;
@@ -371,7 +404,7 @@ body {
 }
 
 
-/* prediction-process-screen.css */
+/* prediction-process-screen.css 
 
 body {
     font-family: Arial, sans-serif;
@@ -416,4 +449,91 @@ body {
     .page-title {
         font-size: 20px;
     }
+} */
+
+/*client-info*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: #333;
+}
+
+.back-btn {
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+}
+
+.page-title {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.client-details {
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+.client-details h2 {
+    font-size: 20px;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.client-details p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.client-details strong {
+    font-weight: bold;
+}
+
+.predict-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.predict-btn:hover {
+    background-color: #218838;
+}
+
