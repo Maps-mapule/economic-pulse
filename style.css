@@ -1,4 +1,4 @@
-/* General Styles */
+/* sign in screen */
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
@@ -105,20 +105,33 @@ button:hover {
     display: block;
 }
 
-body {
-    font-family: Arial, sans-serif;
+/*Landing page*/
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #4A148C;
+    color: white;
 }
 
 .logo {
@@ -126,69 +139,85 @@ header {
     height: auto;
 }
 
-.nav-button {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+nav {
+    display: flex;
+    gap: 20px;
 }
 
-main {
+.nav-button {
+    color: white;
+    text-decoration: none;
+    background-color: #7B1FA2;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
     text-align: center;
-    margin-top: 50px;
 }
 
 h2 {
-    font-size: 36px;
-    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #4A148C;
 }
 
-.simplified-section {
-    margin: 30px auto;
-    padding: 20px;
-    width: 60%;
-    border: 2px solid #333;
-    border-radius: 15px;
-    background-color: #E4CCFF;
-}
-
-h3 {
-    font-size: 28px;
-    color: #201b25;
+.simplified-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #7B1FA2;
 }
 
 .start-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #f3f3f3;
-    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #6A1B9A;
+    color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.start-button:hover {
-    background-color: #555;
-}
-
 .detail-image {
-    margin-top: 40px;
+    margin: 20px auto;
 }
 
 .detail-image img {
-    width: 80%;
+    max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    margin-top: 50px;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
     text-align: center;
+    padding: 10px;
+    background-color: #4A148C;
+    color: white;
+    font-size: 1rem;
 }
+
+@media (max-width: 768px) {
+    header, main, footer {
+        padding: 10px;
+    }
+
+    .nav-button {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .start-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
 
 /* Profile screen styling */
 body {
